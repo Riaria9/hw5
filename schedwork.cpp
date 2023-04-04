@@ -36,7 +36,7 @@ bool schedule(
     }
     sched.clear();
     // Add your code below
-    size_t n_worker = avail.size();
+    size_t n_worker = avail[0].size();
     //everytime someone works, subtract 1 from the maxShifts. If this path failed, plus it back
     vector<int> availableDaysLeft(n_worker,maxShifts);
     return search(0,avail,sched,availableDaysLeft,dailyNeed);
